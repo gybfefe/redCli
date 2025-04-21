@@ -1,6 +1,6 @@
 # 🎮 curses: Browse Reddit like a Terminal Pro
 
-[![Insert cool GIF/Screenshot here showing the TUI in action!]](link-to-gif-if-you-make-one)
+[![Insert cool GIF/Screenshot here showing the TUI in action!]](red01.jpg)
 
 Tired of endless scrolling, distracting sidebars, and resource-hogging browser tabs just to check Reddit? **CursesReddit TUI** strips it all away, giving you a pure, fast, keyboard-first Reddit experience right in your terminal.
 
