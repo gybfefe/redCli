@@ -1,4 +1,4 @@
-# 🎮 redCli: Browse Reddit like a Terminal Pro
+# 🎮 curses: Browse Reddit like a Terminal Pro
 
 [![Insert cool GIF/Screenshot here showing the TUI in action!]](link-to-gif-if-you-make-one)
 
