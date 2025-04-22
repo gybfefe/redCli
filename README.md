@@ -142,10 +142,5 @@ Hey, feel free to fork this, fix bugs, add features (maybe async fetching?), or 
 *   Open an Issue to report bugs or suggest features.
 *   Submit Pull Requests for improvements. Keep it lean and focused!
 
-## 📜 License
-
-[Choose a License - MIT Recommended]
-
----
 
 *Happy terminal browsing!* 😎
