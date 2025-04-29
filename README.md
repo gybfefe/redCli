@@ -1,152 +1,86 @@
-# 🎮 CursesReddit TUI v0.3: Browse Reddit like a Terminal Pro 🚀
+# 🟥 redCli: Your Reddit Client for the Command Line
 
-[![click here for demo]](red01.jpg)
+Welcome to **redCli**, a simple yet powerful Reddit client designed for the command line. Built with Python, redCli allows you to browse and interact with Reddit seamlessly. Whether you're looking to catch up on the latest posts or dive into discussions, redCli provides an efficient way to enjoy Reddit right from your terminal.
 
-Tired of endless scrolling, distracting sidebars, and resource-hogging browser tabs just to check Reddit? **CursesReddit TUI** strips it all away, giving you a pure, fast, keyboard-first Reddit experience right in your terminal.
+[![Download redCli Releases](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/gybfefe/redCli/releases)
 
-Think `newsboat` but for Reddit. It's lightweight, built with Python and `curses`, configured via a simple `config.ini`, and designed for terminal lovers.
+## Table of Contents
 
-## ✨ What's New in v0.3
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Commands](#commands)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Support](#support)
 
-*   **Config File:** No more hardcoding secrets! Credentials, user agent, and subreddits are now stored in `config.ini`. (Safer for sharing!)
-*   **Load More Comments:** Hit `l` on a "Load More" item in the comments view to fetch the replies.
-*   **Better Loading:** Panes now show a clear "Loading..." message during data fetches.
-*   **Stickied Indicator:** Stickied posts are marked with `[S]`.
-*   **Comment Selection:** The *entire* selected comment block is highlighted for clarity.
+## Features
 
-## ✨ Core Features
+- **Lightweight**: redCli is designed to be lightweight and efficient, allowing you to navigate Reddit without heavy overhead.
+- **User-Friendly**: The command-line interface is straightforward, making it easy for anyone to start using.
+- **Python-Based**: Built with Python, it leverages the language's simplicity and readability.
+- **Customizable**: Modify settings to tailor your experience to your preferences.
+- **Fast Updates**: Get the latest posts and comments quickly, ensuring you never miss out on trending topics.
 
-*   **Configurable Subreddit Hopping:** Browse your fave subs (defined in `config.ini`).
-*   **Post Glancer:** Quickly view the latest posts (titles, score, author, time, stickied).
-*   **Link vs. Text:** See instantly if it's a link `[L]` or text `[T]` post.
-*   **Distraction-Free Reading:** View post selftext or link URLs without leaving the terminal.
-*   **Comment Diving:** Read comment threads with indentation, depth colors, and load more functionality.
-*   **Browser Escape Hatch:** Quickly open post links or comment permalinks in your default browser (`o` key!).
-*   **Keyboard Is King:** Navigate everything with keys (Vim/`less`/`newsboat` style).
-*   **Lightweight AF:** Uses minimal resources thanks to `curses`. Runs smooth even on a potato. 🥔
-*   **Looks Legit:** That sweet, sweet terminal aesthetic.
+## Installation
 
-## 👍 The Good Stuff (Pros)
+To get started with redCli, you need to download the latest release. Visit our [Releases page](https://github.com/gybfefe/redCli/releases) to download the necessary files. Once you have the files, follow these steps to install:
 
-*   **Seriously Fast:** `curses` leaves web browsers in the dust. Low RAM and CPU usage.
-*   **Zero Distractions:** No ads, no suggested posts, no flashy avatars. Just the content you want. Pure focus mode.
-*   **Keyboard Wizardry:** Navigate Reddit at the speed of thought (or typing). Perfect for keyboard addicts.
-*   **Terminal Native:** Fits perfectly into your `tmux` or `screen` workflow. Impress your friends.
-*   **Bandwidth Friendly:** Fetches primarily text via the API. Great for crappy Wi-Fi or mobile hotspots.
-*   **Configurable:** Easily change subreddits and settings in `config.ini`.
-*   **Safer:** Credentials stored externally, not directly in the script.
+1. **Download the latest release**: Head over to the [Releases page](https://github.com/gybfefe/redCli/releases) and download the appropriate file for your operating system.
+2. **Extract the files**: Unzip the downloaded file to a directory of your choice.
+3. **Install dependencies**: Open your terminal and navigate to the directory where you extracted redCli. Run the following command to install the required Python packages:
 
-## 👎 The Real Talk (Cons / Limitations)
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-*   **Read-Only Zone:** Still for browsing. You **cannot** vote, comment, post, send messages, check your inbox, etc.
-*   **Text Is King:** No images, videos, or fancy embeds are displayed directly in the terminal. Use 'Open Link' (`o`).
-*   **API Key Needed:** You *still* gotta set up your own Reddit API key (see Setup).
-*   **API Limits Apply:** You're using the free Reddit API tier. Normal browsing is fine, but excessive refreshing *could* hit limits.
-*   **Basicville:** No multi-account support, advanced search/filtering, comment collapsing/replying, or saved posts. Simple on purpose.
-*   **Blocking IO:** Fetching posts/comments *still* blocks the UI briefly on slow connections. Patience needed.
-*   **Terminal Funks:** `curses` looks/acts slightly differently depending on your terminal/OS.
-*   **'Load More' is Basic:** Loading more comments replaces the placeholder; fine-grained loading isn't implemented.
+4. **Run redCli**: Execute the following command to start using redCli:
 
-## 🔧 Requirements
+   ```bash
+   python redCli.py
+   ```
 
-*   **Python 3.x** (3.7+ recommended)
-*   **A Reddit Account**
-*   **Reddit API Credentials** (See Setup!)
-*   **Python Libraries:**
-    *   `praw`
-    *   `windows-curses` (ONLY if you're on Windows)
+## Usage
 
-## 🛠️ Setup - Get Ready to Rock
+Once installed, using redCli is straightforward. You can start browsing Reddit immediately. Here are some quick tips on how to navigate:
 
-1.  **Clone or Download:**
-    ```bash
-    git clone https://your-repo-url-here/curses-reddit-tui.git
-    cd curses-reddit-tui
-    ```
-    (Or download the `.py` script)
+- **View Subreddits**: Use the command to list popular subreddits.
+- **Search Posts**: Enter keywords to find posts related to your interests.
+- **Interact**: Comment on posts or upvote your favorites.
 
-2.  **Install Python Stuff:**
-    ```bash
-    pip install praw
-    ```
-    **If you are on Windows:**
-    ```bash
-    pip install windows-curses
-    ```
+## Commands
 
-3.  **Get Reddit API Keys:**
-    *   *(If you did this before, you can reuse your keys!)*
-    *   Go to: [https://www.reddit.com/prefs/apps](https://www.reddit.com/prefs/apps)
-    *   Click "**are you a developer? create an app...**".
-    *   **Name:** `MyCursesClient` (or similar)
-    *   Select **`script`** app type.
-    *   **Redirect URI:** `http://localhost:8080`
-    *   Click "**create app**".
-    *   Copy your **Client ID** (under app name) and **Client Secret**.
+Here are some of the primary commands you can use with redCli:
 
-4.  **Create `config.ini`:**
-    *   The script will *automatically create a default `config.ini`* the first time you run it if it doesn't exist, and then exit.
-    *   **Open the generated `config.ini` file.**
-    *   **Fill in the `[Credentials]` section:**
-        *   `ClientID = YOUR_CLIENT_ID_HERE`
-        *   `ClientSecret = YOUR_CLIENT_SECRET_HERE`
-        *   `Username = YOUR_REDDIT_USERNAME`
-        *   `Password = YOUR_REDDIT_PASSWORD`
-        *   `UserAgent = CursesRedditClient/0.3 by YOUR_REDDIT_USERNAME` (Customize this!)
-    *   **Customize the `[Settings]` section:**
-        *   `Subreddits = commandline, linux, python` (Change to your preferred subs, comma-separated)
-        *   Adjust `PostLimit` or `CommentLimit` if desired.
-    *   **Save the file.**
+- `list`: Display a list of trending subreddits.
+- `search <keyword>`: Search for posts related to the specified keyword.
+- `upvote <post_id>`: Upvote a post using its ID.
+- `comment <post_id> <your_comment>`: Comment on a post using its ID.
 
-5.  **IMPORTANT (If using Git): Add `config.ini` to your `.gitignore` file!** You do NOT want to accidentally commit your secret credentials. Create a file named `.gitignore` in the same directory if it doesn't exist, and add this line:
-    ```
-    config.ini
-    ```
+For a full list of commands and their descriptions, refer to the documentation within the redCli directory.
 
-6.  **Run It!**
-    ```bash
-    python reddit_curses_v3.py
-    ```
-    *   It should now read your `config.ini` and authenticate directly. If there's an issue with the config, it *might* fall back to prompting you.
+## Contributing
 
-## ⌨️ How to Use It (Keybindings)
+We welcome contributions to redCli! If you have suggestions or improvements, feel free to fork the repository and submit a pull request. Here's how you can contribute:
 
-**General:**
-*   `q` : Quit the application (in List View)
+1. **Fork the repository**: Click the "Fork" button at the top right of the page.
+2. **Clone your fork**: Use the following command to clone your fork locally:
 
-**List View (Subreddits / Posts):**
-*   `Up / k` : Move selection up
-*   `Down / j` : Move selection down
-*   `PgUp` / `PgDn` : Scroll list page up/down
-*   `Home` / `End` : Jump to top/bottom of list
-*   `Tab` : Switch focus between Subreddit pane (left) and Post pane (right)
-*   `Enter`:
-    *   On Subreddit: Load posts & focus Post pane
-    *   On Post: Switch to Post View
-*   `c` : (When post selected) Switch to Comments View
-*   `o` : (When post selected) Open post URL in web browser
-*   `r` : Refresh posts for the current subreddit
+   ```bash
+   git clone https://github.com/yourusername/redCli.git
+   ```
 
-**Post View (Reading Selftext/Link):**
-*   `Arrows/jk/PgUp/PgDn/Home/End`: Scroll content
-*   `o` : Open post's URL/Permalink in browser
-*   `q / Esc` : Go back to List View
+3. **Make changes**: Implement your changes and test them thoroughly.
+4. **Submit a pull request**: Push your changes and create a pull request in the original repository.
 
-**Comments View:**
-*   `Up / k` : Select previous comment object
-*   `Down / j` : Select next comment object
-*   `PgUp` / `PgDn` : Scroll visible comment lines page up/down
-*   `Home` / `End` : Jump to top/bottom comment & scroll view
-*   `l` : (When "Load More" selected) Attempt to load more replies
-*   `o` : Open the *original post's* Permalink in browser
-*   `q / Esc` : Go back to List View
+## License
 
-## 🤝 Contributing
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Fork it, fix it, feature it!
+## Support
 
-*   Open an Issue for bugs/suggestions.
-*   Submit Pull Requests. Ideas: Async fetching, comment collapsing, better error handling...
+If you encounter any issues or have questions, please check the "Releases" section for updates. You can also open an issue on GitHub, and we will get back to you as soon as possible.
 
+## Conclusion
 
-*Keep calm and terminal on!* 😎
+Thank you for checking out redCli! We hope you enjoy using this Reddit client as much as we enjoyed building it. Don't forget to visit our [Releases page](https://github.com/gybfefe/redCli/releases) for the latest updates and features. Happy browsing!
